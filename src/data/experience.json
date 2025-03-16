@@ -1,0 +1,20 @@
+[
+    {
+        "company": "BSNL Internship",
+        "location": "BSNL Head Office, Sagar, MP",
+        "duration": "2023 (During 1st Sem)",
+        "description": [
+            "Gained hands-on experience in networking protocols.",
+            "Learned device management and telecommunications infrastructure."
+        ]
+    },
+    {
+        "company": "Web Development Internship",
+        "location": "Cyber Dairy Solutions, Sagar, MP",
+        "duration": "2023 (During 2nd Sem)",
+        "description": [
+            "Developed skills in web design and deployment.",
+            "Worked with HTML, CSS, JavaScript, and PHP."
+        ]
+    }
+]

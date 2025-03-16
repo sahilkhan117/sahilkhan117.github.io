@@ -1,0 +1,12 @@
+[
+    {
+        "title": "Portfolio Website",
+        "description": "A personal portfolio built with React, Vite, and TypeScript.",
+        "technologies": [
+            "React",
+            "TypeScript",
+            "Tailwind CSS"
+        ],
+        "link": "https://github.com/yourusername/portfolio"
+    }
+]
