@@ -12,10 +12,12 @@
   },
   "aliases": {
     "components": "@/components",
+    "pages": "@/pages",
+    "assets": "@/assets",
     "utils": "@/lib/utils",
     "ui": "@/components/ui",
     "lib": "@/lib",
     "hooks": "@/hooks"
   },
-  "iconLibrary": "lucide"
+  "iconLibrary": "react-icons"
 }

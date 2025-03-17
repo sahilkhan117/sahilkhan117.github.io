@@ -1,17 +1,19 @@
 {
-    "programmingLanguages": [
-        "C",
-        "Java",
-        "Python"
-    ],
-    "webTechnologies": [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "SQL"
-    ],
-    "other": [
-        "Data Structures",
-        "Algorithms"
-    ]
+    "Data": {
+        "programmingLanguages": [
+            "C",
+            "Java",
+            "Python"
+        ],
+        "webTechnologies": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "SQL"
+        ],
+        "other": [
+            "Data Structures",
+            "Algorithms"
+        ]
+    }
 }
