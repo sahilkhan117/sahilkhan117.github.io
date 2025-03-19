@@ -5,51 +5,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
 <body class="bg-black text-white">
-    <nav class="fixed bg-black  z-20 flex justify-between w-full p-4">
-        <h3 class="font-bold text-3xl ps-4 max-md:text-xl" >Sahil Khan</h3>
-        <ul class="flex gap-4 max-md:text-sm font-semibold">
+    <nav
+        class="container fixed bg-linear-0 from-transparent to-black z-20 flex justify-between items-center w-full p-4">
+        <h3 class="font-bold text-3xl ps-4 max-md:text-xl">Sahil Khan</h3>
+        <ul class="flex gap-4 max-md:text-xs font-semibold">
             <li class="hover:text-green-300 "><a href="#Home">Home</a></li>
             <li class="hover:text-green-300 "><a href="#activity">Activity</a></li>
             <li class="hover:text-green-300 "><a href="#pro">Projects</a></li>
             <li class="hover:text-green-300 "><a href="#con">Contact Us</a></li>
         </ul>
     </nav>
-    <main id="Home" class="h-screen flex items-center p-4 ps-8   ">
+    <main id="Home" class="h-screen flex items-center p-4 ps-8">
         <div class="w-screen   ">
-            <div class="h-16  w-2 "></div>
-            <span class="text-2xl max-md:text-xl font-semibold text-green-400 pt-16">Hey There!, I'm-</span>
+            <div class="h-30 w-2 "></div>
+            <span class="text-2xl max-md:text-lg font-semibold text-green-400 pt-16">Hey There!, I'm-</span>
             <h1 class="text-7xl font-bold my-4 max-md:text-3xl ">Sahil Khan.</h1>
-            <p class="text-3xl font-semibold text-gray-500 my-8 w-3/4 max-md:w-10/12 font-mono  "><span
+            <p class="text-3xl max-md:text-xl font-semibold text-gray-500 my-8 w-3/4 max-md:w-full font-mono  "><span
                     class="text-white">Front End Web Developer.</span> Student of <span
                     class="text-yellow-200">CyberDairy Solutions </span> and <br> <span class="text-blue-300 ">Dr.
                     Harishing Gour University, Sagar</p>
 
-            <div class="text-2xl mt-16 text-gray-400 font-semibold">
+            <div class="text-2xl max-md:text-lg mt-16 text-gray-400 font-semibold">
                 <p>🚀 Expert in Front End Web Deplopment with <span class="text-orange-500">HTML</span>, <span
                         class="text-blue-400">CSS</span>, <span class="text-sky-400">Tailwind</span>, <span
                         class="text-yellow-500 ">JavaScript</span> & <span class="text-blue-500">React</span>.</p>
                 <p>⚡ Currently Learning Back End Development with <span class="text-green-400">Node.js</span>, <span
                         class="text-white">Express</span> & <span class="text-green-500">Mongo DB</span>.</p>
             </div>
-            <div class="mt-16 text-xl font-semibold flex gap-4 ">
-                <div class="flex gap-2 p-2 px-4 bg-gray-800 rounded-full ps-2 "><img class="h-8" src="./github.svg"
-                        alt=""> Github</div>
-                <div class="flex gap-2 p-2 px-4 bg-gray-800 rounded-full ps-2 "><img class="h-8 rounded-full"
-                        src="./li.svg" alt=""> LinkedIn</div>
-                <div class="flex gap-2 p-2 px-4 bg-gray-800 rounded-full ps-2 "><img class="h-8" src="./em.svg" alt="">
-                    Email</div>
+            <div
+                class="mt-16 text-xl font-semibold flex gap-4 *:*:items-center max-md:text-lg max-md:gap-2 max-md:*:*:px-1 max-md:*:*:py-1 max-md:*:*:pe-3">
+                <a href="https://github.com/sahilkhan117/">
+                    <div class="flex gap-2 p-2 px-4 bg-gray-800 rounded-full ps-2 ">
+                        <img class="h-8" src="./github.svg" alt=""> Github
+                    </div>
+                </a>
+                <a href="www.linkedin.com/in/sahilkhan3">
+                    <div class="flex gap-2 p-2 px-4 bg-gray-800 rounded-full ps-2 ">
+                        <img class="h-8 rounded-full" src="./li.svg" alt=""> LinkedIn
+                    </div>
+                </a>
+                <a href="mailto:sahilkhan123098p@gmail.com">
+                    <div class="flex gap-2 p-2 px-4 bg-gray-800 rounded-full ps-2 ">
+                        <img class="h-8" src="./em.svg" alt="">Email
+                    </div>
+                </a>
             </div>
         </div>
     </main>
     <div class="h-16 "></div>
-    <div class="p-8  pe-8 flex max-md:block gap-16">
+    <div class="p-8  pe-8 flex max-md:block gap-8">
         <div id="activity">
             <h2 class="text-3xl font-bold mb-8">⚡ About Me</h2>
-            <div class="text-xl">
+            <div class="text-xl max-lg:text-sm max-md:text-xs">
                 <p class="text-gray-300 ps-4 ">
                     I’m a dedicated and resourceful full-stack web developer with hands-on experience in both frontend
                     and backend technologies. My journey began with a strong foundation in web development, <span
@@ -70,8 +82,9 @@
                 </p>
             </div>
         </div>
-        <div class="flex justify-center p-16">
-            <img class="rounded-2xl" height="200" src="20240517_170844.jpg" alt="">
+        <div class="flex justify-center">
+            <img class="rounded-2xl object-cover object-center min-w-1/2 max-md:max-w-11/12" height="200"
+                src="20240517_170844.jpg" alt="">
         </div>
 
     </div>
@@ -96,7 +109,8 @@
                     <div class=""><img class="rounded-xl " src="./clb.png" alt=""></div>
                     <div class="ps-4 ">
                         <h3 class="text-3xl font-semibold my-2 mt-4">Computer Lecture Blogs</h3>
-                        <p class="text-gray-300">A sample Blog website made with React. Its Responsive, and well Designed.</p>
+                        <p class="text-gray-300">A sample Blog website made with React. Its Responsive, and well
+                            Designed.</p>
                     </div>
                 </div>
             </a>
@@ -109,20 +123,20 @@
                     </div>
                 </div>
             </a>
-            
+
             <a href="#">
-            <div class="rounded-xl overflow-hidden bg-gray-900 border-gray-600  border-2 pb-2">
-                <div class=""><img class="rounded-xl " src="./porth.png" alt=""></div>
-                <div class="ps-4 ">
-                    <h3 class="text-3xl font-semibold my-2 mt-4">Personal Portpolio Page</h3>
-                    <p class="text-gray-300"> </p>
+                <div class="rounded-xl overflow-hidden bg-gray-900 border-gray-600  border-2 pb-2">
+                    <div class=""><img class="rounded-xl " src="./porth.png" alt=""></div>
+                    <div class="ps-4 ">
+                        <h3 class="text-3xl font-semibold my-2 mt-4">Personal Portpolio Page</h3>
+                        <p class="text-gray-300"> </p>
+                    </div>
                 </div>
-            </div>
             </a>
         </div>
     </div>
 
-    <footer id="con" class="flex  items-center w-screen justify-center p-4 flex-col">
+    <footer id="con" class="flex items-center w-full justify-center p-4 flex-col">
         <h2 class="text-3xl font-bold">📌 Contact Us</h2>
         <div class="mt-8 text-xl font-semibold flex flex-wrap justify-center gap-8  ">
             <div class="flex gap-2 p-2 px-4 bg-gray-800 rounded-full ps-2 "><img class="h-8" src="./github.svg" alt="">
