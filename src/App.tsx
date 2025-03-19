@@ -1,30 +1,26 @@
-import {Routes, Route} from 'react-router-dom';
+import { Routes, Route } from "react-router-dom";
 
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Home from './pages/Home';
-import About from './pages/About';
-import Services from './pages/Services';
-import Contact from './pages/Contact';
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Home from "./pages/Home";
+
+import { Experience } from "./pages/Experience";
+import Skills from "./pages/Skills";
 
 // import "../public/font/Poppins/Poppins-Black.ttf";
 
 function App() {
-	return (
-		<>
-			<Header />
+  return (
+    <>
+      <Header />
 
-
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+      {/* <Home /> */}
+      <Skills />
+      <Experience />
 
       <Footer />
-		</>
-	);
+    </>
+  );
 }
 
 export default App;

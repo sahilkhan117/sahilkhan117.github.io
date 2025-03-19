@@ -23,7 +23,7 @@ const FontLoader: React.FC = () => {
 
 	fontList.forEach((font) => {
 		const link = document.createElement("link");
-		link.href = `/font/Poppins/${font.name}`;
+		link.href = `public/font/Poppins/${font.name}`;
 		link.rel = "stylesheet";
 		document.head.appendChild(link);
 	});
