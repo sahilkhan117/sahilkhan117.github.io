@@ -1,11 +1,11 @@
-import { Routes, Route } from "react-router-dom";
+// import { Routes, Route } from "react-router-dom";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import Home from "./pages/Home";
 
 import { Experience } from "./pages/Experience";
 import Skills from "./pages/Skills";
+import { FloatingDockDemo } from "./components/FloatingDockDemo";
 
 // import "../public/font/Poppins/Poppins-Black.ttf";
 
@@ -15,6 +15,7 @@ function App() {
       <Header />
 
       {/* <Home /> */}
+      <FloatingDockDemo />
       <Skills />
       <Experience />
 
