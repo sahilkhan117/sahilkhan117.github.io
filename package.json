@@ -19,7 +19,7 @@
     "@tailwindcss/vite": "^4.0.14",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "framer-motion": "^12.5.0",
+    "framer-motion": "^12.6.2",
     "lucide-react": "^0.479.0",
     "motion": "^12.5.0",
     "react": "^19.0.0",
@@ -40,6 +40,8 @@
     "eslint-plugin-react-hooks": "^5.1.0",
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^15.15.0",
+    "prettier": "^3.5.3",
+    "prettier-plugin-tailwindcss": "^0.6.11",
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.24.1",
     "vite": "^6.2.0"
