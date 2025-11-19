@@ -1,160 +1,418 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Sahil Khan - Full Stack Web Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background: #f9fafb;
+            padding: 20px 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(to right, #3b82f6, #1d4ed8, #1e40af);
+            border-radius: 12px 12px 0 0;
+        }
+
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            border: 4px solid #e5e7eb;
+            object-fit: cover;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.02);
+        }
+
+        .name {
+            font-size: 2.2em;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 4px;
+        }
+
+        .title {
+            font-size: 1.2em;
+            color: #6b7280;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .contact {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+            font-size: 0.95em;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #374151;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .contact-item:hover {
+            color: #3b82f6;
+        }
+
+        .contact-item i {
+            color: #3b82f6;
+            width: 16px;
+        }
+
+        .social {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .social-link {
+            color: #374151;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .social-link:hover {
+            color: #3b82f6;
+        }
+
+        .resume-btn {
+            display: inline-block;
+            background: linear-gradient(to right, #3b82f6, #1d4ed8);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95em;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+            margin-top: 16px;
+        }
+
+        .resume-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 16px rgba(59, 130, 246, 0.4);
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 20px;
+        }
+
+        .skill-tag {
+            background: #f3f4f6;
+            color: #374151;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 500;
+            border: 1px solid #e5e7eb;
+            transition: all 0.2s;
+        }
+
+        .skill-tag:hover {
+            background: #dbeafe;
+            border-color: #3b82f6;
+            color: #1d4ed8;
+        }
+
+        .section {
+            background: white;
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            margin-bottom: 32px;
+            border-left: 4px solid #3b82f6;
+        }
+
+        .section h3 {
+            font-size: 1.3em;
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section h3 i {
+            color: #3b82f6;
+        }
+
+        .section ul {
+            list-style: none;
+        }
+
+        .section li {
+            padding: 12px 0;
+            border-bottom: 1px solid #f3f4f6;
+            transition: background 0.2s;
+        }
+
+        .section li:hover {
+            background: #f9fafb;
+            border-left: 3px solid #3b82f6;
+            padding-left: 16px;
+        }
+
+        .section li:last-child {
+            border-bottom: none;
+        }
+
+        .project-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .project-name {
+            font-weight: 600;
+            color: #111827;
+        }
+
+        .project-tech {
+            font-size: 0.9em;
+            color: #6b7280;
+        }
+
+        .achievement-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .achievement-item i {
+            color: #10b981;
+            width: 18px;
+        }
+
+        .education-item {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #9ca3af;
+            font-size: 0.9em;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 16px;
+            }
+
+            .header {
+                padding: 30px 20px;
+            }
+
+            .name {
+                font-size: 1.8em;
+            }
+
+            .contact, .social {
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+            }
+
+            .project-item {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .section {
+                padding: 24px 20px;
+            }
+
+            .resume-btn {
+                padding: 10px 20px;
+                font-size: 0.9em;
+            }
+        }
+    </style>
 </head>
-
-<body class="bg-black text-white">
-    <nav
-        class="container fixed bg-linear-0 from-transparent to-black z-20 flex justify-between items-center w-full p-4">
-        <h3 class="font-bold text-3xl ps-4 max-md:text-xl">Sahil Khan</h3>
-        <ul class="flex gap-4 max-md:text-xs font-semibold">
-            <li class="hover:text-green-300 "><a href="#Home">Home</a></li>
-            <li class="hover:text-green-300 "><a href="#activity">Activity</a></li>
-            <li class="hover:text-green-300 "><a href="#pro">Projects</a></li>
-            <li class="hover:text-green-300 "><a href="#con">Contact Us</a></li>
-        </ul>
-    </nav>
-    <main id="Home" class="h-screen flex items-center p-4 ps-8">
-        <div class="w-screen   ">
-            <div class="h-30 w-2 "></div>
-            <span class="text-2xl max-md:text-lg font-semibold text-green-400 pt-16">Hey There!, I'm-</span>
-            <h1 class="text-7xl font-bold my-4 max-md:text-3xl ">Sahil Khan.</h1>
-            <p class="text-3xl max-md:text-xl font-semibold text-gray-500 my-8 w-3/4 max-md:w-full font-mono  "><span
-                    class="text-white">Front End Web Developer.</span> Student of <span
-                    class="text-yellow-200">CyberDairy Solutions </span> and <br> <span class="text-blue-300 ">Dr.
-                    Harishing Gour University, Sagar</p>
-
-            <div class="text-2xl max-md:text-lg mt-16 text-gray-400 font-semibold">
-                <p>🚀 Expert in Front End Web Deplopment with <span class="text-orange-500">HTML</span>, <span
-                        class="text-blue-400">CSS</span>, <span class="text-sky-400">Tailwind</span>, <span
-                        class="text-yellow-500 ">JavaScript</span> & <span class="text-blue-500">React</span>.</p>
-                <p>⚡ Currently Learning Back End Development with <span class="text-green-400">Node.js</span>, <span
-                        class="text-white">Express</span> & <span class="text-green-500">Mongo DB</span>.</p>
-            </div>
-            <div
-                class="mt-16 text-xl font-semibold flex gap-4 *:*:items-center max-md:text-lg max-md:gap-2 max-md:*:*:px-1 max-md:*:*:py-1 max-md:*:*:pe-3">
-                <a href="https://github.com/sahilkhan117/">
-                    <div class="flex gap-2 p-2 px-4 bg-gray-800 rounded-full ps-2 ">
-                        <img class="h-8" src="./github.svg" alt=""> Github
-                    </div>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="dp.png" alt="Sahil Khan" class="profile-img">
+            <h1 class="name">Sahil Khan</h1>
+            <p class="title">Full Stack Web Developer</p>
+            <div class="contact">
+                <a href="mailto:work.sahilkhan1@gmail.com" class="contact-item">
+                    <i class="fas fa-envelope"></i> work.sahilkhan1@gmail.com
                 </a>
-                <a href="www.linkedin.com/in/sahilkhan3">
-                    <div class="flex gap-2 p-2 px-4 bg-gray-800 rounded-full ps-2 ">
-                        <img class="h-8 rounded-full" src="./li.svg" alt=""> LinkedIn
-                    </div>
-                </a>
-                <a href="mailto:sahilkhan123098p@gmail.com">
-                    <div class="flex gap-2 p-2 px-4 bg-gray-800 rounded-full ps-2 ">
-                        <img class="h-8" src="./em.svg" alt="">Email
-                    </div>
+                <a href="tel:+919303909219" class="contact-item">
+                    <i class="fas fa-phone"></i> +91 9303909219
                 </a>
             </div>
-        </div>
-    </main>
-    <div class="h-16 "></div>
-    <div class="p-8  pe-8 flex max-md:block gap-8">
-        <div id="activity">
-            <h2 class="text-3xl font-bold mb-8">⚡ About Me</h2>
-            <div class="text-xl max-lg:text-sm max-md:text-xs">
-                <p class="text-gray-300 ps-4 ">
-                    I’m a dedicated and resourceful full-stack web developer with hands-on experience in both frontend
-                    and backend technologies. My journey began with a strong foundation in web development, <span
-                        class="text-green-400">mastering the fundamentals </span> of HTML, CSS, and JavaScript, and
-                    progressively delving into modern frameworks and libraries. Currently, I am proficient in various
-                    frontend tools, including <span class="text-green-400"> Tailwind, Bootstrap, and WordPress </span>,
-                    with advanced knowledge in JavaScript (ES6) and React for building dynamic and responsive
-                    interfaces. On the backend, I have a solid understanding of Node.js and Express for creating robust
-                    server-side applications, paired with databases like MySQL and MongoDB to manage and store data
-                    efficiently.
-                </p>
-                <p class="text-gray-300 ps-4 my-4">
-                    Currently, I’m enhancing my full-stack development skills through an internship with Cyber Dairy
-                    Solution, where <span class="text-green-400">I’m deepening my knowledge of React for front-end
-                        development </span>, Node and Express on the server side, and MySQL for managing complex data
-                    interactions. As an intermediate programmer, I’m always eager to tackle new challenges, learn the
-                    latest tools and methodologies, and bring innovative ideas to life through code.
-                </p>
+            <div class="social">
+                <a href="https://www.linkedin.com/in/sahilkhan117/" target="_blank" class="social-link">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="https://github.com/sahilkhan117" target="_blank" class="social-link">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://leetcode.com/sahilkhan117/" target="_blank" class="social-link">
+                    <i class="fas fa-code"></i> LeetCode
+                </a>
+            </div>
+            <a href="Sahil_Khan.pdf" class="resume-btn">
+                <i class="fas fa-download"></i> Download Resume
+            </a>
+            <div class="skills">
+                <span class="skill-tag">Next.js</span>
+                <span class="skill-tag">React</span>
+                <span class="skill-tag">Node.js</span>
+                <span class="skill-tag">LangChain</span>
+                <span class="skill-tag">OpenAI API</span>
+                <span class="skill-tag">MongoDB</span>
+                <span class="skill-tag">AWS</span>
+                <span class="skill-tag">Docker</span>
+                <span class="skill-tag">MySQL</span>
+                <span class="skill-tag">TypeScript</span>
+                <span class="skill-tag">Python</span>
             </div>
         </div>
-        <div class="flex justify-center">
-            <img class="rounded-2xl object-cover object-center min-w-1/2 max-md:max-w-11/12" height="200"
-                src="20240517_170844.jpg" alt="">
+
+        <div class="section">
+            <h3><i class="fas fa-briefcase"></i> Experience</h3>
+            <ul>
+                <li>
+                    <strong>Full Stack Web Developer</strong> | CyberDairy Solutions, Sagar, MP<br>
+                    <small>Oct 2024 – Present</small><br>
+                    Engineered scalable apps handling 10K+ requests; Led Infinity College Admission System with PHP/MySQL/JWT.
+                </li>
+                <li>
+                    <strong>Web Developer Trainee</strong> | CyberDairy Solutions, Sagar, MP<br>
+                    <small>Apr 2024 – Sep 2024</small><br>
+                    Developed 8+ MERN/WordPress apps; Optimized RESTful backends, improving engagement by 40%.
+                </li>
+            </ul>
         </div>
 
+        <div class="section">
+            <h3><i class="fas fa-project-diagram"></i> Projects</h3>
+            <ul>
+                <li class="project-item">
+                    <div>
+                        <div class="project-name">ChatNCERT</div>
+                        <div class="project-tech">Next.js, LangChain, OpenAI, Pinecone</div>
+                    </div>
+                    <small>AI academic assistant with RAG & vector search; Deployed on Vercel</small>
+                </li>
+                <li class="project-item">
+                    <div>
+                        <div class="project-name">University Social Network</div>
+                        <div class="project-tech">React, Node.js, Socket.io, MongoDB</div>
+                    </div>
+                    <small>Real-time chat & 100+ APIs; 95+ Lighthouse score</small>
+                </li>
+                <li class="project-item">
+                    <div>
+                        <div class="project-name">Student Counseling System</div>
+                        <div class="project-tech">PHP, MySQL, JWT</div>
+                    </div>
+                    <small>Role-based admission portal with merit analytics</small>
+                </li>
+                <li class="project-item">
+                    <div>
+                        <div class="project-name">E-Commerce Dashboard</div>
+                        <div class="project-tech">React, Node.js, MySQL, Chart.js</div>
+                    </div>
+                    <small>CRUD & analytics for 500+ products; 35% query optimization</small>
+                </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3><i class="fas fa-trophy"></i> Achievements</h3>
+            <ul>
+                <li class="achievement-item">
+                    <i class="fas fa-star"></i>
+                    LeetCode: 203+ problems | Rating 1,597 (Top 23.6%) | GitHub 1,433 contributions
+                </li>
+                <li class="achievement-item">
+                    <i class="fas fa-star"></i>
+                    Reliance Foundation Scholarship (Top 5,000 nationwide)
+                </li>
+                <li class="achievement-item">
+                    <i class="fas fa-star"></i>
+                    NPTEL Java Elite + Topper (90+ percentile, IIT Kharagpur)
+                </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+            <ul>
+                <li class="education-item">
+                    <div>
+                        <strong>B.Tech Computer Science & Engineering</strong><br>
+                        Dr. Hari Singh Gour Central University, Sagar, MP
+                    </div>
+                    <div>CGPA: 8.00 (SGPA 6th: 8.62) | 2022 – 2026</div>
+                </li>
+            </ul>
+        </div>
+
+        <footer class="footer">
+            <p>© 2025 Sahil Khan. Built with ❤️ Love.</p>
+        </footer>
     </div>
-
-
-    <div id="pro" class="p-12  ">
-        <h2 class="text-4xl font-semibold">🚀 Projects</h2>
-
-        <div class="my-8 grid grid-cols-2 max-md:grid-cols-1 gap-4">
-            <a href="https://sahilkhan117.github.io/Projects/Shaaz%20Resstro/">
-                <div class="rounded-xl overflow-hidden bg-gray-900 border-gray-600  border-2 pb-2">
-                    <div class=""><img class="rounded-xl " src="./shaax.png" alt=""></div>
-                    <div class="ps-4 ">
-                        <h3 class="text-3xl font-semibold my-2 mt-4">Saaz restorent</h3>
-                        <p class="text-gray-300"> This is Simple Design of a Restaurant Landing Page . Including The
-                            Home, Info and Menu Block.</p>
-                    </div>
-                </div>
-            </a>
-            <a href="https://sahilkhan117.github.io/Projects/Computer-Lecture-Blogs/">
-                <div class="rounded-xl overflow-hidden bg-gray-900 border-gray-600  border-2 pb-2">
-                    <div class=""><img class="rounded-xl " src="./clb.png" alt=""></div>
-                    <div class="ps-4 ">
-                        <h3 class="text-3xl font-semibold my-2 mt-4">Computer Lecture Blogs</h3>
-                        <p class="text-gray-300">A sample Blog website made with React. Its Responsive, and well
-                            Designed.</p>
-                    </div>
-                </div>
-            </a>
-            <a href="https://sahilkhan117.github.io/WEB-by-CyberDairy/Movies-Tracker/">
-                <div class="rounded-xl overflow-hidden bg-gray-900 border-gray-600  border-2 pb-2">
-                    <div class=""><img class="rounded-xl " src="./movies.png" alt=""></div>
-                    <div class="ps-4 ">
-                        <h3 class="text-3xl font-semibold my-2 mt-4">Movies tracker</h3>
-                        <p class="text-gray-300"> </p>
-                    </div>
-                </div>
-            </a>
-
-            <a href="#">
-                <div class="rounded-xl overflow-hidden bg-gray-900 border-gray-600  border-2 pb-2">
-                    <div class=""><img class="rounded-xl " src="./porth.png" alt=""></div>
-                    <div class="ps-4 ">
-                        <h3 class="text-3xl font-semibold my-2 mt-4">Personal Portpolio Page</h3>
-                        <p class="text-gray-300"> </p>
-                    </div>
-                </div>
-            </a>
-        </div>
-    </div>
-
-    <footer id="con" class="flex items-center w-full justify-center p-4 flex-col">
-        <h2 class="text-3xl font-bold">📌 Contact Us</h2>
-        <div class="mt-8 text-xl font-semibold flex flex-wrap justify-center gap-8  ">
-            <div class="flex gap-2 p-2 px-4 bg-gray-800 rounded-full ps-2 "><img class="h-8" src="./github.svg" alt="">
-                Github</div>
-            <div class="flex gap-2 p-2 px-4 bg-gray-800 rounded-full ps-2 "><img class="h-8 rounded-full" src="./li.svg"
-                    alt=""> LinkedIn</div>
-            <div class="flex gap-2 p-2 px-4 bg-gray-800 rounded-full ps-2 "><img class="h-8" src="./em.svg" alt="">
-                Email</div>
-
-            <div class="flex gap-2 p-2 px-4 bg-gray-800 rounded-full ps-2 text-green-400"><img class="h-8"
-                    src="./re.svg" alt="">
-                Resume</div>
-
-
-        </div>
-        <div class="h-16"> </div>
-    </footer>
-    <div class="bg-gray-800 text-center p-2">Copywrite 2024 ©️ Sahil Khan</div>
 </body>
-
 </html>
